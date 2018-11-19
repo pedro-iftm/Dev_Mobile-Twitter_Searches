@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/queryEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:hint="@string/queryPrompt"
+        android:imeOptions="actionNext" />
+
+    <LinearLayout android:layout_gravity="fill_horizontal">
+
+        <EditText
+            android:id="@+id/tagEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|fill_horizontal"
+            android:layout_weight="1"
+            android:hint="@string/tagPrompt"
+            android:imeOptions="actionDone" />
+
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_save"
+            android:contentDescription="@string/saveDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="fill"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_blue_bright"
+        android:padding="16dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:text="@string/taggedSearches"/>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_marginBottom="@dimen/tagged_searches_padding"
+            android:layout_marginTop="@dimen/tagged_searches_padding"
+            android:layout_weight="1"
+            android:paddingTop="16dp">
+        </ListView>
+    </LinearLayout>
+
+</GridLayout>
